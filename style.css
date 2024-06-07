@@ -21,7 +21,7 @@
 }
 
 html{
-    font-size: 62.5%;
+    font-size: 45%;
     overflow-x: hidden;
 }
 
@@ -54,6 +54,8 @@ body{
     font-weight: 650;
     margin-left: 3.5rem;
     transition: .3s;
+}
+
 }
 
 .nav a:hover,
@@ -328,20 +330,32 @@ max-width: 80rem;
 }
 
 .education-column .title {
-    font-size: 3.0rem;
+    font-size: 3.5rem;
     margin: 0 0 4rem 5rem;
-    margin: 10%;
+    margin: 9%;
+    text-align: center;
 }
 
 .education-column .education-box {
-    border-left: .5rem solid var(--text-color);
-    border-style:none
+    border-left: .3rem solid var(--text-color);
+    border-style: none
 
 }
 
 .education-box .education-content {
     position: relative;
-    padding-left: 2rem;
+    padding-left: 4rem;
+}
+
+.education-box .education-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1.0rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--nav-color);
+    border-radius: 70%;
 }
 
 .education-content .content {
@@ -349,7 +363,50 @@ max-width: 80rem;
     padding: 1.5rem;
     border: .2rem solid var(--text-color);
     border-radius: .6rem;
+    margin-bottom: 2rem; 
+    overflow: hidden;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--text-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
 }
 
+.education-content .content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.education-content .content:hover::before {
+    width: 100%;
+}
+
+.education-content .content .year {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    padding-bottom: .5rem;   
+}
+
+.education-content .content .year i {
+    padding-right: .5rem ;
+}
+
+.education-content .content h3 {
+    font-size: 2rem;
+}
+
+.education-content .content p {
+    font-size: 1.5rem;
+    padding-top: .5rem;
+}
 
 }
